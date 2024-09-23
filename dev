@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Check if the file ~/.tmux.conf exists and delete it if it does
+if [ -f "$HOME/.zshrc" ]; then
+  rm "$HOME/.zshrc"
+fi
+if [ -f "$HOME/.aliasesrc" ]; then
+  rm "$HOME/.aliasesrc"
+fi
+
+ln -s $(pwd)/.zshrc ~/.zshrc
+ln -s $(pwd)/.aliasesrc ~/.aliasesrc
+
